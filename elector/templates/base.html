@@ -1,0 +1,29 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% include 'partials/title-meta.html' %}
+    {% include 'partials/head-css.html' %}
+</head>
+
+<body>
+
+    <div class="app-wrapper">
+        {% include 'partials/sidenav.html' %}
+
+        <!-- Start Page content here-->
+        <div class="app-content">
+            {% include 'partials/topbar.html' %}
+            <main class="p-6">
+                {% include 'partials/page-title.html' %}
+                {% block content %}
+
+
+                {% endblock %}
+            </main>
+            {% include 'partials/footer.html' %}
+        </div>
+        
+    </div>
+    {% include 'partials/footer-scripts.html' %}
+</body>
